@@ -50,6 +50,7 @@ Resize the frame and rotate it using OpenCV functions, then display the processe
 **Name       :  MURALIDHARAN M
 **Register No:  212223040120
 
+```
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -86,6 +87,7 @@ axes[2].axis('off')
 plt.tight_layout()
 plt.show()
 
+```
 
 ---
 
