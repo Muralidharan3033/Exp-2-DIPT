@@ -67,6 +67,7 @@ plt.show()
 ```
 
 <img width="512" height="411" alt="image" src="https://github.com/user-attachments/assets/eae49b1b-35af-4b2f-b9c1-2434df592210" />
+
 ```
 cap = cv2.VideoCapture(0)
 
@@ -83,6 +84,7 @@ for i in range(50):
 
 cap.release()
 ```
+
 <img width="512" height="389" alt="image" src="https://github.com/user-attachments/assets/610fa5af-8b20-4188-b2b8-d3ffbd4372f9" />
 
 ```
@@ -103,6 +105,7 @@ for i in range(50):
 cap.release()
 
 ```
+
 <img width="266" height="389" alt="image" src="https://github.com/user-attachments/assets/53119564-846e-430d-b94d-cd8d8d2e9926" />
 
 ```
