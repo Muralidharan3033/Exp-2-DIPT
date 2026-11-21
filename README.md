@@ -46,72 +46,85 @@ Resize the frame and rotate it using OpenCV functions, then display the processe
 
 ## 💻 Program
 
-### Developed By:
-**Name       :  MURALIDHARAN M
-**Register No:  212223040120
-
 ```
 import cv2
 import matplotlib.pyplot as plt
-import numpy as np
+from IPython.display import clear_output
+import time
 
-img = cv2.imread('captured_frame.jpg')
+cap = cv2.VideoCapture(0)
+ret, frame = cap.read()
+if ret:
+    cv2.imwrite("captured_frame.jpg", frame)
+cap.release()
 
-if img is None:
-    print("Error: Image 'captured_frame.jpg' not found! Creating fallback image.")
-    img = np.zeros((300, 300, 3), dtype=np.uint8)
-    cv2.putText(img, 'Exp 2 Test', (50, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+captured_image = cv2.imread('captured_frame.jpg')
 
-img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-blurred_img = cv2.GaussianBlur(gray_img, (5, 5), 0)
-edges = cv2.Canny(blurred_img, threshold1=100, threshold2=200)
-
-cv2.imwrite('edges_detected.jpg', edges)
-print("Processed edge image saved as 'edges_detected.jpg'.")
-
-fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-
-axes[0].imshow(img_rgb)
-axes[0].set_title('Original Image (RGB)')
-axes[0].axis('off')
-
-axes[1].imshow(gray_img, cmap='gray')
-axes[1].set_title('Grayscale Image')
-axes[1].axis('off')
-
-axes[2].imshow(edges, cmap='gray')
-axes[2].set_title('Canny Edges')
-axes[2].axis('off')
-
-plt.tight_layout()
+plt.imshow(captured_image[:,:,::-1])
+plt.title('Captured Frame')
+plt.axis('off')
 plt.show()
-
 ```
 
----
+<img width="512" height="411" alt="image" src="https://github.com/user-attachments/assets/eae49b1b-35af-4b2f-b9c1-2434df592210" />
+```
+cap = cv2.VideoCapture(0)
 
-## Output
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
 
-### i) Write the frame as JPG image
-<img width="488" height="392" alt="WhatsApp Image 2026-11-06 at 12 57 46 AM" src="https://github.com/user-attachments/assets/c64b48ca-8156-44eb-8af3-361f08026354" />
+cap.release()
+```
+<img width="512" height="389" alt="image" src="https://github.com/user-attachments/assets/610fa5af-8b20-4188-b2b8-d3ffbd4372f9" />
 
+```
+cap = cv2.VideoCapture(0)
 
-### ii) Display the video
-<img width="497" height="370" alt="WhatsApp Image 2026-11-06 at 12 58 04 AM" src="https://github.com/user-attachments/assets/76825564-7730-4ee6-86ee-1ee872514daf" />
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    resized_frame = cv2.resize(frame, (100, 150))  # Resize to 320x240
+    frame_rgb = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
 
+cap.release()
 
+```
+<img width="266" height="389" alt="image" src="https://github.com/user-attachments/assets/53119564-846e-430d-b94d-cd8d8d2e9926" />
 
-### iii) Display the video by resizing the window
-<img width="257" height="372" alt="WhatsApp Image 2026-11-06 at 12 58 16 AM" src="https://github.com/user-attachments/assets/7490ec8b-792c-44df-a159-0515036c4fd3" />
+```
+cap = cv2.VideoCapture(0)
 
+for i in range(50):
+    ret, frame = cap.read()
+    if not ret:
+        break
+    rotated_frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
+    frame_rgb = cv2.cvtColor(rotated_frame, cv2.COLOR_BGR2RGB)
+    clear_output(wait=True)
+    plt.imshow(frame_rgb)
+    plt.axis('off')
+    plt.show()
+    time.sleep(0.05)
 
+cap.release()
+```
 
-### iv) Rotate and display the video
-<img width="287" height="371" alt="WhatsApp Image 2026-11-06 at 12 58 29 AM" src="https://github.com/user-attachments/assets/3b0f4273-ff07-4421-bd04-22fa40427612" />
+<img width="297" height="389" alt="image" src="https://github.com/user-attachments/assets/efe432b5-3e06-4cb8-8e26-07655a4d6008" />
 
-
----
 
 
 ## Result:
