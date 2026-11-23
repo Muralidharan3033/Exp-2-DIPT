@@ -3,7 +3,6 @@
 ## Name       :  MURALIDHARAN M
 ## Register No:  212223040120
 
-
 ---
 
 ## Aim
@@ -66,7 +65,8 @@ plt.axis('off')
 plt.show()
 ```
 
-<img width="512" height="411" alt="image" src="https://github.com/user-attachments/assets/eae49b1b-35af-4b2f-b9c1-2434df592210" />
+<img width="512" height="410" alt="image" src="https://github.com/user-attachments/assets/5c658226-1bc0-4e42-95e5-86beb154fb01" />
+
 
 ```
 cap = cv2.VideoCapture(0)
@@ -85,7 +85,8 @@ for i in range(50):
 cap.release()
 ```
 
-<img width="512" height="389" alt="image" src="https://github.com/user-attachments/assets/610fa5af-8b20-4188-b2b8-d3ffbd4372f9" />
+<img width="512" height="389" alt="image" src="https://github.com/user-attachments/assets/9be84bb4-2584-40b9-8038-d76571b38886" />
+
 
 ```
 cap = cv2.VideoCapture(0)
@@ -106,7 +107,8 @@ cap.release()
 
 ```
 
-<img width="266" height="389" alt="image" src="https://github.com/user-attachments/assets/53119564-846e-430d-b94d-cd8d8d2e9926" />
+<img width="266" height="389" alt="image" src="https://github.com/user-attachments/assets/739a1767-afba-4858-9ec9-50407e4cd24a" />
+
 
 ```
 cap = cv2.VideoCapture(0)
@@ -126,7 +128,7 @@ for i in range(50):
 cap.release()
 ```
 
-<img width="297" height="389" alt="image" src="https://github.com/user-attachments/assets/efe432b5-3e06-4cb8-8e26-07655a4d6008" />
+<img width="297" height="389" alt="image" src="https://github.com/user-attachments/assets/12ef68ed-6bda-41d0-becf-1e8fffcd3129" />
 
 
 
